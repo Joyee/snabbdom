@@ -18,10 +18,13 @@ function addNS (data: any, children: VNodes | undefined, sel: string | undefined
   }
 }
 
+// 函数重载
+// 定义了四种形式
 export function h (sel: string): VNode
 export function h (sel: string, data: VNodeData | null): VNode
 export function h (sel: string, children: VNodeChildren): VNode
 export function h (sel: string, data: VNodeData | null, children: VNodeChildren): VNode
+// 具体实现
 export function h (sel: any, b?: any, c?: any): VNode {
   var data: VNodeData = {}
   var children: any
